@@ -16,10 +16,6 @@
     (setq exec-path (split-string path-from-shell path-separator))))
 
 
-;; Custom Keys
-(global-set-key (kbd "C-h C-h") 'newline)
-
-
 ;; Clipboard
 (setq x-select-enable-clipboard t)
 
@@ -31,12 +27,6 @@
 
 ;; Cursor Style
 (setq-default cursor-type 'bar)
-
-
-;; Jedi
-(add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:setup-keys t)
-(add-hook 'python-mode-hook 'jedi:setup)
 
 
 ;; God Mode
@@ -63,12 +53,10 @@
 
 ;; Theme
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
-;;(disable-theme 'zenburn)
-;;(load-theme 'gotham)
 (set-face-attribute 'default nil :height 105)
 (setq-default truncate-lines 't)
-;;(set-face-attribute 'web-mode-block-face nil :background "grey8")
 (setq-default whitespace-line-column 100)
+
 
 ;; cursor
 (blink-cursor-mode 1)
@@ -96,7 +84,6 @@
 (define-key helm-map
   (kbd "C-z")
   'helm-select-action) ; list actions using C-z
-
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini)
