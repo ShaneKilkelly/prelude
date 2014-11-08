@@ -47,8 +47,8 @@
 (global-set-key (kbd "C-x C-2") 'split-window-below)
 (global-set-key (kbd "C-x C-3") 'split-window-right)
 (global-set-key (kbd "C-x C-0") 'delete-window)
-(global-set-key (kbd "C-x o") 'other-window)
 (global-set-key (kbd "C-x C-;") 'helm-projectile)
+(global-set-key (kbd "C-x o") 'ace-window)
 
 
 ;; Theme
