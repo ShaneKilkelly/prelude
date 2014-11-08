@@ -104,6 +104,10 @@
 (setq-default tab-width 2)
 
 
+;; Theme
+(set-face-background 'web-mode-block-face "grey12")
+
+
 ;; shell scripts
 (setq-default sh-basic-offset 2)
 (setq-default sh-indentation 2)
