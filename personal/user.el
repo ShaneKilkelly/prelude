@@ -31,7 +31,7 @@
 
 ;; God Mode
 (require 'god-mode)
-(define-key god-local-mode-map (kbd "z") 'repeat)
+(define-key god-local-mode-map (kbd ".") 'repeat)
 (global-set-key (kbd "<escape>") 'god-local-mode)
 (defun my-update-cursor ()
   (setq cursor-type (if (or god-local-mode buffer-read-only)
