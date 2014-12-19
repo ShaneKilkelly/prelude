@@ -9,6 +9,10 @@
 (setq prelude-guru nil)
 
 
+;; confirm exit
+(setq confirm-kill-emacs 'yes-or-no-p)
+
+
 ;; env PATH
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PATH'")))
@@ -47,7 +51,7 @@
 (global-set-key (kbd "C-x C-2") 'split-window-below)
 (global-set-key (kbd "C-x C-3") 'split-window-right)
 (global-set-key (kbd "C-x C-0") 'delete-window)
-(global-set-key (kbd "C-x C-;") 'helm-projectile)
+(global-set-key (kbd "C-x C-.") 'helm-projectile)
 (global-set-key (kbd "C-x o") 'ace-window)
 
 
