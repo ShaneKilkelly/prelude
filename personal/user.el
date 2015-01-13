@@ -60,7 +60,8 @@
 (set-face-attribute 'default nil :height 105)
 (setq-default truncate-lines 't)
 (setq-default whitespace-line-column 100)
-
+(disable-theme 'zenburn)
+(load-theme 'solarized-light)
 
 ;; cursor
 (blink-cursor-mode 1)
