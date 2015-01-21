@@ -16,7 +16,7 @@
 ;; (require 'prelude-coffee)
 ;; (require 'prelude-common-lisp)
 (require 'prelude-css)
-(require 'prelude-emacs-lisp)
+;;(require 'prelude-emacs-lisp)
 ;; (require 'prelude-erlang)
 ;; (require 'prelude-go)
 (require 'prelude-haskell)
@@ -33,5 +33,5 @@
 (require 'prelude-shell)
 ;; (require 'prelude-scss)
 (require 'prelude-web) ;; Emacs mode for web templates
-(require 'prelude-xml)
-(require 'prelude-yaml)
+;;(require 'prelude-xml)
+;;(require 'prelude-yaml)
