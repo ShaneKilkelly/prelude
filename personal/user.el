@@ -51,7 +51,6 @@
 (global-set-key (kbd "C-x C-2") 'split-window-below)
 (global-set-key (kbd "C-x C-3") 'split-window-right)
 (global-set-key (kbd "C-x C-0") 'delete-window)
-(global-set-key (kbd "C-x C-.") 'helm-projectile)
 (global-set-key (kbd "C-x o") 'ace-window)
 
 
@@ -95,6 +94,7 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c h o") 'helm-occur)
 (global-set-key (kbd "C-c h C-c p") 'helm-projectile)
+(global-set-key (kbd "C-x h") 'helm-projectile)
 
 
 ;; smooth scrolling
