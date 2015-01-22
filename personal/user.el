@@ -46,19 +46,13 @@
 (add-hook 'god-mode-disabled-hook 'my-update-cursor)
 
 
-;; Custom Keys
-(global-set-key (kbd "C-x C-1") 'delete-other-windows)
-(global-set-key (kbd "C-x C-2") 'split-window-below)
-(global-set-key (kbd "C-x C-3") 'split-window-right)
-(global-set-key (kbd "C-x C-0") 'delete-window)
-(global-set-key (kbd "C-x o") 'ace-window)
 
 
 ;; Theme
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
 (set-face-attribute 'default nil :height 105)
 (setq-default truncate-lines 't)
-(setq-default whitespace-line-column 100)
+(setq-default whitespace-line-column 120)
 (disable-theme 'zenburn)
 (load-theme 'solarized-light)
 
@@ -88,13 +82,21 @@
 (define-key helm-map
   (kbd "C-z")
   'helm-select-action) ; list actions using C-z
+
+
+;; Custom Keys
+(global-set-key (kbd "C-x C-1") 'delete-other-windows)
+(global-set-key (kbd "C-x C-2") 'split-window-below)
+(global-set-key (kbd "C-x C-3") 'split-window-right)
+(global-set-key (kbd "C-x C-0") 'delete-window)
+(global-set-key (kbd "C-x o") 'ace-window)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-c h o") 'helm-occur)
-(global-set-key (kbd "C-c h C-c p") 'helm-projectile)
-(global-set-key (kbd "C-x h") 'helm-projectile)
+(global-set-key (kbd "C-x C-h o") 'helm-occur)
+(global-set-key (kbd "C-x C-h p") 'helm-projectile)
+(global-set-key (kbd "C-x C-h i") 'helm-imenu)
 
 
 ;; smooth scrolling
