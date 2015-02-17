@@ -22,3 +22,4 @@ tramp
 /var/pcache
 .python-environments/
 ac-comphist.dat
+ensime/

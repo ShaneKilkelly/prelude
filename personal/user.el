@@ -8,6 +8,13 @@
 ;; Deactivate Guru
 (setq prelude-guru nil)
 
+;; Theme
+(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
+(set-face-attribute 'default nil :height 105)
+(setq-default truncate-lines 't)
+(setq-default whitespace-line-column 120)
+(set-face-background 'web-mode-block-face "grey12")
+
 
 ;; confirm exit
 (setq confirm-kill-emacs 'yes-or-no-p)
@@ -18,6 +25,11 @@
   (let ((path-from-shell (shell-command-to-string "$SHELL -i -c 'echo $PATH'")))
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
+
+
+;; Ensime
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 
 ;; Clipboard
@@ -45,16 +57,6 @@
 (add-hook 'god-mode-enabled-hook 'my-update-cursor)
 (add-hook 'god-mode-disabled-hook 'my-update-cursor)
 
-
-
-
-;; Theme
-(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
-(set-face-attribute 'default nil :height 105)
-(setq-default truncate-lines 't)
-(setq-default whitespace-line-column 120)
-(disable-theme 'zenburn)
-(load-theme 'solarized-light)
 
 ;; cursor
 (blink-cursor-mode 1)
@@ -97,6 +99,7 @@
 (global-set-key (kbd "C-x C-h o") 'helm-occur)
 (global-set-key (kbd "C-x C-h p") 'helm-projectile)
 (global-set-key (kbd "C-x C-h i") 'helm-imenu)
+(global-set-key (kbd "C-x C-h y") 'helm-show-kill-ring)
 
 
 ;; smooth scrolling
@@ -110,9 +113,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
 (setq-default js2-basic-offset 2)
-
-;; Theme
-(set-face-background 'web-mode-block-face "grey12")
 
 
 ;; shell scripts
